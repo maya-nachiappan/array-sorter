@@ -7,40 +7,40 @@
 
 #include <iostream>
 #include <algorithm> // for std::sort
-using namespace std;
+
 
 void sortArray(int arr[], int size) { // creates function to sort array
-    sort(arr, arr + size); // sort the array numerically
+    std::sort(arr, arr + size); // sort the array numerically
 }
 
 int main() {
     int size;
 
     // Ask the user for the number of elements
-    cout << "Enter the number of elements in the array: ";
-    cin >> size;
+    std::cout << "Enter the number of elements in the array: ";
+    std::cin >> size;
 
     // Create an array of the specified size
     int* arr = new int[size];
 
     // Ask the user to input the elements
-    cout << "Enter " << size << " integers:" << endl;
+    std::cout << "Enter " << size << " integers:" << std::endl;
     for (int i = 0; i < size; ++i) {
-        cin >> arr[i]; // integers are inputted in array
+        std::cin >> arr[i]; // integers are inputted in array
     }
 
-    cout << "Original array: " << endl;
+    std::cout << "Original array: " << std::endl;
     for (int i = 0; i < size; ++i) {
-        cout << arr[i] << " "; // prints original array
+        std::cout << arr[i] << " "; // prints original array
     }
-    cout << endl;
+    std::cout << std::endl;
 
     sortArray(arr, size); // Sorts the array
 
-    cout << "Sorted array: " << endl;
+    std::cout << "Sorted array: " << std::endl;
     for (int i = 0; i < size; ++i) {
-        cout << arr[i] << " " << endl; // prints sorted array
+        std::cout << arr[i] << " " << std::endl; // prints sorted array
     }
-    cout << endl;
+    std::cout << std::endl;
     return 0;
 }
